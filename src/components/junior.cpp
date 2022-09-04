@@ -95,14 +95,14 @@ void JuniorController::Update(float dt)
 			// die
 			if (col.other->go->GetComponent<Hazard*>())
 			{
-				isDead = true;
+				isDead = false;
 				Notify(JuniorEvent::Death);
 			}
 		}
 
 		if (go->position.y > 246)
 		{
-			isDead = true;
+			isDead = false;
 			Notify(JuniorEvent::Death);
 		}
 	}
